@@ -1,0 +1,33 @@
+body{
+    background-color: #e4e4e4;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    font-family: 'SimSun';
+    font-size: 48px;
+    font-weight: bold;
+    color: #142143 ;
+    text-align: center;
+}
+
+div.card_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+article{
+    display: flex;
+    justify-content: center;
+}
+table{
+    border-collapse: collapse;
+    width: 200px;
+    margin: 10px;
+}
+td{
+    border: 1px solid #ffaf00;
+    text-align: center;
+    padding: 5px;
+}
