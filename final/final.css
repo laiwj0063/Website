@@ -1,0 +1,37 @@
+body{
+    background-color: #e4e4e4;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    font-family: 'SimSun';
+    font-size: 48px;
+    font-weight: bold;
+    color: #142143 ;
+    text-align: center;
+}
+
+div.container {
+    display: flex;
+    height: 100vh; 
+}
+
+.left-column {
+    width: 60%;
+    background-image: url("picture/logo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.right-column {
+    width: 40%; 
+    background-color: #ecf0f1;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+}
