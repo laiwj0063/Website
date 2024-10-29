@@ -1,0 +1,16 @@
+body{
+    background-color: #e4e4e4;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    font-family: 'SimSun';
+    font-size: 48px;
+    font-weight: bold;
+    color: #142143 ;
+    text-align: center;
+}
+article{
+    display: flex;
+    justify-content: center;
+}
