@@ -6,38 +6,33 @@ h1{
     text-align: center;
 }
 
-body {
+body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     background-color: #eeeeee;
 }
 
 header{
-    margin: 0;
+    height: 250px;
     text-align: center;
-    height: 200px;
 }
 
-main {
+main{
+    width: 80vw;
+    height: 300px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    height: 300px;
-    width: 80vw; /* 使用視窗寬度的 80% */
-    max-width: 100%; /* 最大寬度 100%，避免超出視窗 */
+    max-width: 100%;
     justify-content: center;
-    padding: 10px;
 }
 
-.ball {
-    width: 10vw; /* 使用相對視窗大小的單位 */
-    height: 10vw; /* 使用相對視窗大小的單位 */
-    max-width: 80px; /* 限制最大寬高，避免過大 */
-    max-height: 80px;
+.ball{
+    width: 80px;
+    height: 80px;
     background-color: #666c7b;
     border-radius: 50%;
     display: flex;
