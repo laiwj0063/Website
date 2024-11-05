@@ -1,0 +1,49 @@
+h1{
+    font-family: 'SimSun';
+    font-size: 48px;
+    font-weight: bold;
+    color: #3a3f43 ;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eeeeee;
+}
+
+header{
+    margin: 0;
+    text-align: center;
+    height: 200px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 80vw; /* 使用視窗寬度的 80% */
+    max-width: 100%; /* 最大寬度 100%，避免超出視窗 */
+    justify-content: center;
+    padding: 10px;
+}
+
+.ball {
+    width: 10vw; /* 使用相對視窗大小的單位 */
+    height: 10vw; /* 使用相對視窗大小的單位 */
+    max-width: 80px; /* 限制最大寬高，避免過大 */
+    max-height: 80px;
+    background-color: #666c7b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a3f43;
+}

@@ -16,22 +16,22 @@ div.container {
     height: 100vh; 
 }
 
-.left-column {
-    width: 60%;
-    background-image: url("picture/logo.png");
-    background-size: cover;
-    background-position: center;
-}
-
-.right-column {
-    width: 40%; 
-    background-color: #ecf0f1;
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-}
-
-article{
+/* 讓開始畫面和遊戲畫面填滿螢幕，並置中文字於中央 */
+#start-screen, #game-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column; /* 垂直排列內容 */
+    background-color: #f0f0f0; /* 可以根據需要修改背景顏色 */
+    margin: 0;
 }
+
+#game-screen {
+    display: none; /* 預設隱藏遊戲畫面 */
+}
+
