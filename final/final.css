@@ -11,13 +11,8 @@ h1{
     text-align: center;
 }
 
-div.container {
-    display: flex;
-    height: 100vh; 
-}
-
-/* 讓開始畫面和遊戲畫面填滿螢幕，並置中文字於中央 */
-#start-screen, #game-screen {
+/* 開始畫面 */
+#start-screen {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,12 +21,56 @@ div.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* 垂直排列內容 */
-    background-color: #f0f0f0; /* 可以根據需要修改背景顏色 */
+    flex-direction: column;
+    background-color: #f0f0f0;
     margin: 0;
 }
 
+/* 遊戲畫面 */
 #game-screen {
-    display: none; /* 預設隱藏遊戲畫面 */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33.33vw;
+    height: 95vh;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
 }
 
+/* 每個長條容器 */
+.bar-container {
+    width: 20%; /* 每個容器的寬度為區域的 1/5 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* 高度調整為容納長條和文字 */
+}
+
+/* 長條設計 */
+.bar {
+    width: 100%; /* 長條寬度充滿容器 */
+    height: 90%; /* 長條高度 */
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+/* 標籤設計 */
+.label {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.moving-block {
+    position: absolute;
+    width: 18%;
+    height: 25px; /* 每個小方塊的高度 */
+    background-color: #e74c3c;
+    top: -30px;  /* Start position above the screen */
+    opacity: 0;  /* Initially hidden */
+}
