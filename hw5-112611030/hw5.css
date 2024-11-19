@@ -1,0 +1,65 @@
+h1{
+    font-family: 'SimSun';
+    font-size: 48px;
+    font-weight: bold;
+    color: #3a3f43 ;
+    text-align: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eeeeee;
+}
+
+header{
+    height: 250px;
+    text-align: center;
+}
+
+main{
+    width: 80vw;
+    height: 300px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+}
+
+#letterArea{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 2.4em);
+}
+
+#keyArea{
+    display: flexbox;
+}
+
+.letter, .key{
+    background-color: gray;
+    border-radius: 0.5em;
+    font-size: 2em;
+    width: 2.2em;
+    height: 2.2em;
+    text-align: center;
+    padding: 0.2em;
+    margin: 0.1em;
+    text-transform: uppercase;
+}
+
+.letterGray{
+    background-color: gray;
+}
+
+.letterYellow{
+    background-color: yellow;
+}
+
+.lettterGreen{
+    background-color: green;
+}

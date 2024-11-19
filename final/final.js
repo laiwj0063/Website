@@ -1,40 +1,24 @@
 "use strict";
-let html = `<div id="start-screen">
+let html = `<div id="startScreen">
         <h1>Welcome to the Game</h1>
         <p>Press "Start" to begin your adventure!</p>
         <button id="start-button">Start</button>
-    </div>
-
-    <!-- 遊戲畫面 -->
-    <div id="game-screen">
-        <div class="bar-container">
-            <div class="bar"></div>
-            <div class="label">D</div>
-        </div>
-        <div class="bar-container">
-            <div class="bar"></div>
-            <div class="label">F</div>
-        </div>
-        <div class="bar-container">
-            <div class="bar"></div>
-            <div class="label">space</div>
-        </div>
-        <div class="bar-container">
-            <div class="bar"></div>
-            <div class="label">J</div>
-        </div>
-        <div class="bar-container">
-            <div class="bar"></div>
-            <div class="label">K</div>
-        </div>
     </div>`;
 
+html += `<div id="gameScreen">`;
+for(let c of 'DF JK'){
+    html += `<div class="bar-container">
+    <div class="bar"></div>`;
+    if(c == ' ') html += `<button id="Key${c.toUpperCase()}" class="key">space`;
+    else html += `<button id="Key${c.toUpperCase()}" class="key">${c}</button>`;
+    html += '</div>';
+}
 document.body.innerHTML = html;
 
 // 獲取開始按鈕和畫面元素
 const startButton = document.getElementById("start-button");
-const startScreen = document.getElementById("start-screen");
-const gameScreen = document.getElementById("game-screen");
+const startScreen = document.getElementById("startScreen");
+const gameScreen = document.getElementById("gameScreen");
 
 // 設定每個 bar 的小方塊到達時間
 const allTargetTimes = [

@@ -12,7 +12,7 @@ h1{
 }
 
 /* 開始畫面 */
-#start-screen {
+#startScreen {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@ h1{
 }
 
 /* 遊戲畫面 */
-#game-screen {
+#gameScreen {
     position: absolute;
     top: 0;
     left: 50%;
@@ -60,7 +60,7 @@ h1{
 }
 
 /* 標籤設計 */
-.label {
+.key {
     margin-top: 10px;
     font-size: 18px;
     text-align: center;
