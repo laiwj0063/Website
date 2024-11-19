@@ -16,6 +16,7 @@ html += '</div>';
 
 document.getElementById("context").innerHTML = html;
 
+let secret = DICTIONARY[Math.ceil(Math.random()*DICTIONARY.length)].toUpperCase();
 let cursor = 0;
 let aLetter = document.getElementsByClassName('letter');
 let aButton = document.getElementsByClassName('key');
@@ -32,18 +33,18 @@ window.addEventListener('keydown',function(e){
 })
 
 function keyProcess(code, key){
-    if(e.code == 'Backspace'){
+    if(code == 'Backspace'){
         aLetter[cursor].innerText = ' ';
         if(cursor % 5 > 0) cursor--;
-    } else if(e.code == 'Enter'){
-        if(cursor % 5 == 4 && !aLetter[cursor] === ' '){
+    } else if(code == 'Enter'){
+        if((cursor % 5 == 4) && (!aLetter[cursor] === ' ')){
             let guess;
             for(let i = cursor - 4,ch,j; i < cursor;i++){
-                ch = aLetter[i].innerText.toLowerCase();
+                ch = aLetter[i].innerText;
                 j = secret.indexOf(ch);
-                if(j == -1) document.getElementById(code).classList.add('letterGray');
-                else if(j == cursor % 5) document.getElementById(code).classList.add('letterGreen');
-                else document.getElementById(code).classList.add('letterYellow');
+                if(j == -1) document.getElementById('Key'+ch).classList.add('letterGray');
+                else if(j == cursor % 5) document.getElementById('Key'+ch).classList.add('letterGreen');
+                else document.getElementById('Key'+ch).classList.add('letterYellow');
                 guess += ch;
             }console.log(guess);
             if(guess == secret) console.log('Congradulation!');
@@ -53,7 +54,7 @@ function keyProcess(code, key){
             }
         }
     }else{
-        aLetter[cursor].innerText = e.key.toUpperCase();
+        aLetter[cursor].innerText = key.toUpperCase();
         cursor++;
     }
 }
