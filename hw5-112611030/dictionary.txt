@@ -1,4 +1,4 @@
-const DICTIONARY = `which
+which
 there
 their
 about
@@ -5754,4 +5754,4 @@ osier
 roble
 rumba
 biffy
-pupal` .split('\n');
+pupal

@@ -1,8 +1,7 @@
 h1{
-    font-family: 'SimSun';
-    font-size: 48px;
+    font-size: 58px;
     font-weight: bold;
-    color: #3a3f43 ;
+    color: #44485a ;
     text-align: center;
 }
 
@@ -11,12 +10,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #eeeeee;
 }
 
 header{
-    height: 250px;
+    height: 120px;
     text-align: center;
 }
 
@@ -41,8 +38,10 @@ main{
 }
 
 .letter, .key{
-    background-color: gray;
+    color: #44485a;
+    background-color: #aeb9c5;
     border-radius: 0.5em;
+    border-color: #44485a;
     font-size: 2em;
     width: 2.2em;
     height: 2.2em;
@@ -53,13 +52,13 @@ main{
 }
 
 .letterGray{
-    background-color: gray;
+    background-color: #838e9a;
 }
 
 .letterYellow{
-    background-color: yellow;
+    background-color: #dbbb7c;
 }
 
-.lettterGreen{
-    background-color: green;
+.letterGreen{
+    background-color: #73ac99;
 }
