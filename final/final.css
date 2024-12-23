@@ -1,4 +1,4 @@
-body {
+body{
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: black;
@@ -6,7 +6,7 @@ body {
     text-align: center;
 }
 
-#startScreen {
+#startScreen{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,39 +14,45 @@ body {
     height: 100vh;
 }
 
-#startButton {
+#startButton{
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
 }
 
-#gameScreen {
+#gameScreen{
     display: none;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000; /* 遊戲背景色 */
+    background-color: #000;
 }
 
-/* 設定 #barContainer 為水平排列 */
-#barContainer {
-    display: flex; /* 水平排列子元素 */
-    justify-content: center; /* 水平方向居中 */
-    align-items: flex-start; /* 垂直方向置頂 */
-    gap: 20px; /* 音軌之間的間距 */
+#endScreen{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-/* 音軌的樣式 */
-.bar {
+#barContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.bar{
     width: 60px;
     height: 700px;
     background-color: rgba(255, 255, 255, 0.1);
-    position: relative; /* 便於放置子元素 */
-    overflow: hidden; /* 隱藏超出範圍的部分 */
-    border: 1px solid #fff; /* 加個邊框方便辨識 */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #fff;
 }
 
-.moving-block {
+.moving-block{
     width: 100%;
     height: 20px;
     background: white;
@@ -54,7 +60,7 @@ body {
     opacity: 0;
 }
 
-.judgement-line {
+.judgement-line{
     position: absolute;
     bottom: 200px;
     height: 2px;
@@ -63,7 +69,7 @@ body {
     z-index: 2;
 }
 
-#judgementResultDisplay {
+#judge{
     position: absolute;
     top: 200px;
     left: 50%;
@@ -76,3 +82,24 @@ body {
     transition: opacity 0.2s ease;
 }
 
+#combo{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(227, 27, 245);
+    text-align: center;
+}
+
+#score{
+    position: absolute;
+    top: 50px;
+    left: 90%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
