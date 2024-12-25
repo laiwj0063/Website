@@ -41,6 +41,7 @@ let html = `
     <p>Perfect: <span id="perfectCount">0</span></p></br>
     <p>Great: <span id="greatCount">0</span></p></br>
     <p>Good: <span id="goodCount">0</span></p></br>
+    <p>Good: <span id="badCount">0</span></p></br>
     <p>Miss: <span id="missCount">0</span></p></br>
     <button id="restartButton">Restart</button>
 </div>`;
@@ -94,10 +95,22 @@ const songs = [
         cover: "picture/mayoiuta.jpg",
         file: "music/mayoiuta.mp3",
         tracks: {
-            D: [900, 1800, 2700, 3600],
-            F: [1300, 2100, 2900, 3700],
-            J: [1100, 1900, 2700, 3500],
-            K: [1500, 2300, 3100, 3900],
+            D: [0, 7600, 8700, 9800, 10800, 13800, 15150, 15850, 17400, 20000,
+                20600, 23600, 23900, 25200, 29400, 31800, 32400, 33000, 33600,36000,
+                39300
+            ],
+            F: [750, 4700, 5850, 12300, 12800, 14050, 16800, 18000, 18600, 23000,
+                23600, 24800, 26400, 27000, 28800, 31200, 34200, 36300, 37200, 37800,
+                39000
+            ],
+            J: [1500, 7600, 8700, 11800, 13800, 14800, 16200, 18000, 19200, 22400,
+                23900, 24500, 27600, 28200, 28800, 30600, 33000, 34800, 35400, 36600,
+                38700
+            ],
+            K: [2250, 4700, 5850, 9800, 10800, 12550, 14050, 15500, 17400, 21200,
+                21800, 24500, 24800, 25800, 29400, 30000, 32400, 33600, 34200, 36900,
+                38400
+            ],
         },
     },
 ];
@@ -133,7 +146,7 @@ function Good(block){
 }
 
 function Bad(block){
-    judge.showJudge("Good");
+    judge.showJudge("Bad");
     combo = 0;
     badTotal++;
     score += 40;
@@ -210,6 +223,7 @@ function endGame() {
     document.getElementById("perfectCount").textContent = perfectTotal;
     document.getElementById("greatCount").textContent = greatTotal;
     document.getElementById("goodCount").textContent = goodTotal;
+    document.getElementById("badCount").textContent = badTotal;
     document.getElementById("missCount").textContent = missTatal;
 }
 
